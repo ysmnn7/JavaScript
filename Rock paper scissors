@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="RPS.css">
+<body>
+ 
+    <button class='button' onclick="
+          var moveComputer=pickMoveComputer();
+          var result=playGame('rock');" >
+             rock
+    </button>
+ 
+
+<button class='button' onclick="
+          var moveComputer =pickMoveComputer();
+          var result=playGame('paper');">
+             paper
+    </button>
+
+<button class='button' onclick="
+       var moveComputer =pickMoveComputer();
+        var result=playGame('scissors');"
+           >
+             scissors
+             
+    </button>  
+ 
+<script>
+   
+    var wins=0;
+    var loses=0;
+    var equals=0;
+    //Declaring the wins/loses/equals in <script> creates a global variable — shared by all buttons
+
+
+     function playGame(playerMove){
+     var moveComputer=pickMoveComputer();
+     var result='';
+     if (playerMove==='rock'){
+          if(moveComputer === 'rock'){
+            result='equal';
+           }else if (moveComputer ==='paper'){
+            result ='you lose';
+           }else if(moveComputer==='scissors'){
+            result='you win';
+           }}
+      if (playerMove==='scissors'){
+          if(moveComputer === 'paper'){
+            result='you win';
+           }else if (moveComputer ==='scissors'){
+            result ='equal';
+           }else if(moveComputer==='rock'){
+            result='you lose';
+           }}
+      
+      if(playerMove==='paper'){
+         if(moveComputer === 'rock'){
+            result='you win';
+           }else if (moveComputer ==='paper'){
+            result ='equal';
+           }else if(moveComputer==='scissors'){
+            result='you lose';
+           }}
+          
+        if (result==='you win'){
+            wins++;}
+        else if(result==='you lose'){
+            loses++;
+        }else if(result==='equal'){
+            equals++;
+        }
+            alert(`you picked ${playerMove},Computer picked ${moveComputer} result: ${result} 
+          wins:${wins}  loses:${loses}  equals:${equals}`);}
+
+     
+
+
+
+
+
+    function pickMoveComputer(){
+             var moveComputer =''; // we have to create this variable to use it in the if loop
+             var randomNumber = Math.random();
+         
+
+          if (randomNumber >=0 && randomNumber< 1 / 3){
+            moveComputer ='rock';
+          }else if (randomNumber >=1/3 && randomNumber< 2 / 3){
+
+            //any variable we create between {..}will only exists inside them
+            moveComputer ='paper' ;
+          }else if(randomNumber >=2/3 && randomNumber< 1){
+            
+           moveComputer ='scissors';}
+     return moveComputer;
+
+    }
+</script>
+</body>
