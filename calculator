@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    Calculator
+</title>
+
+
+</head>
+<body>
+ <style>
+.number{
+   border-radius: 50%;
+   font-size: 30px;
+   border:8px black;
+}
+.clear{
+  font-size : 25px;
+
+}
+.number:hover{
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+</style>
+    
+
+  <p>
+    <button  class ="number"  onclick="
+     calculation += 9;
+     console.log(calculation);
+     ">
+        9
+    </button>
+     
+    <button class ="number" onclick="
+     calculation += 8;
+     console.log(calculation);
+     ">
+        8
+    </button>
+
+
+    <button  class ="number"  onclick="
+     calculation += 7;
+     console.log(calculation);
+     ">
+        7
+    </button>
+ 
+    
+    <button class ="number"  onclick ="calculation += ' - ' ;
+            console.log(calculation);
+            "> 
+            -
+        </button> 
+       
+    
+</p>
+
+<p>
+        <button  class ="number" onclick="
+     calculation += 6;
+     console.log(calculation);
+     "
+   >
+    6
+    </button>
+     <button  class ="number" onclick="
+     calculation += 5;
+     console.log(calculation);
+     "
+   >
+    5
+    </button>
+     <button class ="number"  onclick="
+     calculation += 4;
+     console.log(calculation);
+     "
+   >
+    4
+    </button>
+    <button class ="number"  onclick ="calculation += ' + ' ;
+            console.log(calculation);
+            "> 
+            +
+        </button> 
+   </p>
+
+
+   <p>
+     <button class ="number"  onclick ="calculation += 3;
+                       console.log(calculation);">
+             3
+          </button>
+    
+    
+   <button class ="number"  onclick="
+     calculation += 2;
+     console.log(calculation);
+     "
+   >
+    2
+    </button>
+   <button class ="number" onclick="
+   calculation +=1;
+   console.log(calculation)
+    ;">
+     1
+    </button>
+     <button class ="number"  onclick ="calculation += ' * ' ;
+            console.log(calculation);
+            "> 
+            *
+        </button> 
+    </p>
+    <p>
+     <button class ="number"  onclick="
+     calculation += 0;
+     console.log(calculation);
+     "
+   >
+    0
+    </button>
+         <button class ="number"  onclick ="calculation += ' . ' ;
+            console.log(calculation);
+            "> 
+            .
+        </button> 
+         <button class ="number"  onclick ="calculation += ' / ' ;
+            console.log(calculation);
+            "> 
+            /
+        </button> 
+
+         <button class ="number"  onclick="
+            calculation =eval(calculation);
+            console.log(calculation);
+            ">
+                =
+            </button>
+            </p>
+
+            <button class="clear "onclick="
+            calculation='';
+            console.log('cleared');
+            ">clear</button>
+<script> 
+    let calculation='';
+</script>
+</body>
+</html>
